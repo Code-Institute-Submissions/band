@@ -1,0 +1,112 @@
+	.containernav {
+		display: flex;
+		background-color: #7cc5ef;
+		width: 100%;
+		padding-left: 10px;
+	}
+
+	h1 {
+		font-family: 'Righteous', cursive;
+	}		
+
+	#navbar {
+		margin-left: auto;
+		margin-right: auto; 
+		margin-top: 30px;
+	}
+
+
+	li {
+		display: inline-block;
+		
+		font-size: 20px;
+		padding: 0px 20px 0px 20px;
+
+	}
+
+	a:hover, a:visited, a:link, a:active {
+		text-decoration: none;
+		color: #e81ba3;
+	}
+
+	a:hover {
+		background-color: #e81ba3;
+		color: #7cc5ef;
+	}
+
+	body { 
+	  background: url(frontpage.jpg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  overflow: scroll;
+	} 
+
+	#bodycont {
+		display: flex;
+		display: none;
+		flex-direction: column;
+		flex-flow: wrap;
+		margin-right: auto;
+		margin-left: auto;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 50px;
+		font-size: 0;
+		width: 60%;
+		background-color: transparent;
+	}
+
+	.textbox {
+		display: inline-block;
+		width: 600px;
+		margin-top: 50px;
+		padding: 5px 20px 5px 20px;
+		margin: 20px;
+		font-size: 15px;
+		background-color: #7cc5ef;
+		border-radius: 5px;
+		
+	}
+
+	.textbox h1 {
+		border-bottom: 2px #e81ba3 solid;
+	}
+
+	#musiccont {
+		display: flex;
+		flex-direction: column;
+		flex-flow: wrap;
+		margin-right: auto;
+		margin-left: auto;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 50px;
+		font-size: 0;
+		width: 60%;
+		background-color: transparent;
+	}
+
+	.textbox video {
+		width: 100% !important;
+   		height: auto !important;
+	}
+
+	.textbox audio {
+		margin top: 50px;
+		width: 100% !important;
+   		height: auto !important;
+	}
+
+	.socialbox {
+		display: flex;
+		flex-direction: row-reverse;
+		width: 100%;
+		background-color: #e81ba3;
+		color: #7cc5ef;
+		padding-right: 245px;
+	}
+
+	
+
