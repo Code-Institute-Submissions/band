@@ -1,4 +1,4 @@
-angular.module('NavDirective',[]).directive('navBar', function() {
+angular.module('NavDirective',[]).directive('navtop', function() {
   return {
     restrict: 'E',    // E -> element
     templateUrl: 'templates/directives/navtop.html'
@@ -10,5 +10,5 @@ angular.module('TestDirective',[]).directive('test', function() {
 		restrist: 'A',
 		templateUrl: 'templates/directives/test.html'
 	};
-})
+});
 
