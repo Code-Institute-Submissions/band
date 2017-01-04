@@ -108,5 +108,7 @@
 		padding-right: 245px;
 	}
 
-	
+	.socialbox ul {
+		display: none; 
+	}
 

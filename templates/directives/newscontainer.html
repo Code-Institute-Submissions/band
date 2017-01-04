@@ -1,0 +1,181 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+			$('#headpicture').mouseenter(function() {
+				$('.jumbotron').css('background-color', '#f7f7f4');
+				$('.textdisplay').slideDown();
+			})
+			$('#headpicture').mouseleave(function() {
+				$('.textdisplay').slideUp();
+			})
+
+		   
+
+		   $('#submit').click(function() {
+		   		$('#newsletter').modal('hide')
+		   })
+
+		   if (Cookies.get('newsletteronce') == null) {
+				Cookies.set ('newsletteronce', 'yes', {expires: 7});
+				setTimeout(function(){
+               $('#newsletter').modal()
+                  },10000); // 10 seconds.
+				
+			}
+
+
+		var today = new Date()
+	  	var timemessage = today.getHours()
+
+		  if (timemessage > 18) {
+		    $('.goodday').text('Good Evening');
+		  }
+		  else if (timemessage > 12) {
+		    $('.goodday').text('Good Afternoon');
+		  }
+		  else if (timemessage > 0) {
+		    $('.goodday').text('Good Morning');
+		  }
+		  else {
+		    $('.goodday').text('Howdy');
+		  }
+
+	console.log(timemessage)		
+
+	});
+
+			
+
+			
+
+</script>
+
+<style type="text/css">
+	.formpadding {
+		margin: 0px 20px 5px 20px;
+	}
+</style>
+
+
+<div id="headpicture">
+		<div class="jumbotron">
+		<div class="textdisplay"><p>We are a swing/jive band that has played many weddings and corporate events, we can accomodate many types of functions and are always happy to here from you, you can head over to our <a href="#/music">music</a> page to hear our latest songs and see our some of our videos. If you'd like to book us you can fill in the form <a href="#/bookings">here</a>!!
+		</p>
+		</div>
+		</div>
+</div>
+<br>
+
+<div class="container">
+<h2>Tour</h2>
+	<div class="row">
+		<div class="col-lg-12">
+			<table class="table">
+			<thead>
+			<tr>
+			<th>Location</th>
+			<th></th>
+			<th>Date</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td>The Sands Centre, Carlisle</td>
+			<td><a href="https://www.google.co.uk/maps/place/Sands+Centre,+Carlisle+CA1+1JQ/@54.8994847,-2.9341006,17z/data=!4m5!3m4!1s0x487d1a23bf5dd881:0xc565f6055cc5916b!8m2!3d54.8997747!4d-2.9340791" target="_blank"><span class="glyphicon glyphicon-map-marker"></span></a></td>
+			<td>18-06-2017</td>
+			</tr>
+			<tr>
+			<td>The Factory, Glasgow</td>
+			<td><a href="https://www.google.co.uk/maps/place/The+Factory,+319-321+Craigpark+Dr,+Glasgow+G31+2TB/@55.8624857,-4.2138918,17z/data=!3m1!4b1!4m5!3m4!1s0x4888415637d5ea15:0x96d22ce964b28aed!8m2!3d55.8624857!4d-4.2117031" target="_blank"><span class="glyphicon glyphicon-map-marker"></span></a></td>
+			<td>20-07-2016</td>
+			</tr>
+			<tr>
+			<td>Hammersmith, London</td>
+			<td><a href="https://www.google.co.uk/maps/place/Eventim+Apollo/@51.4908397,-0.2266926,17z/data=!3m1!4b1!4m5!3m4!1s0x48760fb775795673:0xf42b73f2887ea294!8m2!3d51.4908397!4d-0.2245039" target="_blank"><span class="glyphicon glyphicon-map-marker"></span></a></td>
+			<td>16-08-2016</td>
+			</tr>
+			<tr>
+			<td>3Arena, Dublin</td>
+			<td><a href="https://www.google.co.uk/maps/place/3Arena/@53.3474963,-6.2306965,17z/data=!3m1!4b1!4m5!3m4!1s0x48670ef2ba5bd0ff:0xc462cb2728687754!8m2!3d53.3474963!4d-6.2285078" target="_blank"><span class="glyphicon glyphicon-map-marker"></span></a></td>
+			<td>19-08-2016</td>
+			</tr>
+			<tr>
+			<td>ABC, Glasgow</td>
+			<td><a href="https://www.google.co.uk/maps?q=abc+glasgow&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjxzJy-6-vQAhUpDMAKHXlHCg4Q_AUICCgB" target="_blank"><span class="glyphicon glyphicon-map-marker"></span></a></td>
+			<td>05-09-2016</td>
+			</tr>
+			</tbody>
+			</table>
+			</p>
+		</div>
+	</div>
+	<h2>News</h2>
+	<div class="row newscolor">
+		<div class="col-sm-6">
+		<p>
+		<img class="newsimages" src="images/albumcover1.jpg">
+		</p>
+		</div>
+		<div class="col-sm-6 infobox">
+		<h2>New Video</h2>
+		<p>Check out our new music video, we hope you like it, it took us a few years but we have something we really like and hope you will enjoy. You can find it <a href="#/music">here</a></p>
+		</div>
+	</div>
+	<div class="row newscolor">
+		<div class="col-sm-6">
+		<p>
+		<img class="newsimages" src="images/albumcover3.jpg">
+		</p>
+		</div>
+		<div class="col-sm-6 infobox">
+		<h2>New Music</h2>
+		<p>We have a new song!! you can check it out <a href="#/music">here</a></p>
+		</div>
+	</div>		
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="newsletter">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title goodday"></h4>
+      </div>
+      <div class="modal-body">
+        <p>Want to hear when we'll be playing live events and release new music? Sign up below.</p>
+      </div>
+      <form>
+  <div class="form-group formpadding">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+  </div>
+  <div class="form-group formpadding">
+    <label for="email">Email Address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+  </div>
+</form>
+      <div class="modal-footer">
+      	<button type="submit" class="btn btn-default" id="submit" data-toggle="modal" data-target="#myModal">Submit</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Thanks for registering</h4>
+      </div>
+      <div class="modal-body">
+        <p>We'll send you an email when we have exciting news and events planned</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="js/js.cookie.js"></script>

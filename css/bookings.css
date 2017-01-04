@@ -1,0 +1,22 @@
+.label {
+		display: inline-block;
+		color: black;
+	}
+
+fieldset {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f7f7f4;
+	height: 400px;
+}
+
+input {
+	height: 30px;
+	width: 300px;
+}
+.submitbut {
+	margin-top: 10px;
+	background-color: #fb027f;
+	color: black;
+	border-radius: 20px;
+}

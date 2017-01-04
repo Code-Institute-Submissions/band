@@ -1,14 +1,27 @@
 angular.module('NavDirective',[]).directive('navtop', function() {
   return {
-    restrict: 'E',    // E -> element
+    restrict: 'A',    // A -> attribute
     templateUrl: 'templates/directives/navtop.html'
   };
 })
 
-angular.module('TestDirective',[]).directive('test', function() {
+angular.module('NewsCont',[]).directive('newscontainer', function() {
 	return {
-		restrist: 'A',
-		templateUrl: 'templates/directives/test.html'
+		restrict: 'A',
+		templateUrl: 'templates/directives/newscontainer.html'
 	};
-});
+})
 
+angular.module('MailList',[]).directive('maillist', function() {
+  return {
+    restrict: 'A',    // A -> attribute
+    templateUrl: 'templates/directives/maillist.html'
+  };
+})
+
+angular.module('Footer',[]).directive('footer', function() {
+  return {
+    restrict: 'A',    // A -> attribute
+    templateUrl: 'templates/directives/footer.html'
+  };
+})
