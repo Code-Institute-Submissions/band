@@ -8,20 +8,23 @@ angular.module('NavDirective',[]).directive('navtop', function() {
 angular.module('NewsCont',[]).directive('newscontainer', function() {
 	return {
 		restrict: 'A',
-		templateUrl: 'templates/directives/newscontainer.html'
+		templateUrl: 'templates/directives/newscontainer.html',
+    controller: 'NewsletterSignupController'
 	};
 })
 
 angular.module('MailList',[]).directive('maillist', function() {
   return {
     restrict: 'A',    // A -> attribute
-    templateUrl: 'templates/directives/maillist.html'
+    templateUrl: 'templates/directives/maillist.html',
+    controller: 'MailListSignUp'
   };
 })
 
 angular.module('Footer',[]).directive('footer', function() {
   return {
     restrict: 'A',    // A -> attribute
-    templateUrl: 'templates/directives/footer.html'
+    templateUrl: 'templates/directives/footer.html',
+    controller: 'FooterController'
   };
 })

@@ -1,68 +1,28 @@
-<script type="text/javascript">
-
-	function availablity() {
-		
-	var firstName = document.getElementById("fname").value
-	var lastName = document.getElementById("lname").value
-	var Email = document.getElementById("email").value
-	var iDate = document.getElementById("date").value
-
-	var bookings = ["2016-12-29"];
-
-	bookings.push(firstName, lastName, Email);
-
-	var result = bookings.indexOf(iDate)
-		if (result != -1) {
-			window.alert("Sorry " + iDate + " is already taken, please try another date");
-		}
-		
-	bookings.push(iDate)
-	console.log(bookings)
-	};
-
-</script>
-
-<style type="text/css">
-	.mailbox {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-		width:600px;
-		padding: 20px;
-    margin-bottom: 0px; 
-    	}
-
-@media screen and (max-width: 600px){
-  .mailbox {
-    width: 90%
-  }
-
-</style>
-
-
-
-
 <div class="mailbox">
 	<h2>Availability</h2>
 	<p>If you like what you see check out our availablity and fill in the form and we'll be in touch as soon as we can!</p>
-	<form>
+	<form name="registrationForm" data-ng-submit="submitForm()" novalidate="">
   <div class="form-group">
     <label for="name">First Name:</label>
-    <input type="text" class="form-control" id="fname" name="fname" placeholder="Fist Name" ng-model="fname">
+    <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" ng-model="fname" required>
+    <p data-ng-show="registrationForm.fname.$pristine" class="help-block">Your first name is required</p>
   </div>
    <div class="form-group">
     <label for="name">Last Name:</label>
-    <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name">
+    <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" ng-model="lname" required>
+    <p data-ng-show="registrationForm.lname.$pristine" class="help-block">Your last name is required</p>
   </div>
   <div class="form-group">
     <label for="email">Email Address</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+    <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="email" required>
+    <p data-ng-show="registrationForm.email.$pristine" class="help-block">Your email address is required</p>
   </div>
   <div class="form-group">
     <label for="name">Date</label>
-    <input type="date" class="form-control" id="date" name="date" placeholder="Date" onchange="availablity()">
+    <input type="text" class="form-control" id="datepicker" placeholder="Date" name="date" ng-model="date" required>
+    <p data-ng-show="registrationForm.date.$pristine" class="help-block">Please choose a date</p>
   </div>
-  <button type="submit" class="btn btn-default" id="submit" data-toggle="modal" data-target="#BookingConfirm">Submit</button>
+  <button type="submit" class="btn btn-default" ng-disabled="registrationForm.$invalid" data-toggle="modal" data-target="#BookingConfirm">Submit</button>
 </form>
 </div>
 </div>
