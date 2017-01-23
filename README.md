@@ -26,7 +26,7 @@ The site uses Angular JS and designed with bootstrap.
 ## Tech Used
 
 [AngularJS](https://angularjs.org/)
-    - We use **AngularJS** to handle page routing, we also use it to make calls to the REST API and build custom directives
+    - We use **AngularJS** to handle page routing, build custom directives
 - [Bootstrap](http://getbootstrap.com/)
     - We use **Bootstrap** to give our project a simple, responsive layout
 - [npm](https://www.npmjs.com/)
