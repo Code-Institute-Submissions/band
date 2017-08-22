@@ -16,7 +16,7 @@ The site uses Angular JS and designed with bootstrap.
 
 ## Features
 
-###Exisisting Features
+Existing Features
 
  - Search for availability
  - Search for songs to listen to on itunes
@@ -53,3 +53,8 @@ The site uses Angular JS and designed with bootstrap.
 5. Once **http-server** is installed run ```http-server```
 6. The project will now run on [localhost](http://127.0.0.1:8080)
 7. Make changes to the code and if you think it belongs in here then just submit a pull request
+
+### Testing
+Testing was carried out by changing the code and loading the browser when required, checking the console logs in Google Chrome to pinpoint any errors and then amend the changes to get the code working. 
+
+Once the site was at it's final stages it has been tested by colleagues if anything was broken in anyways, if any issues were found they were reported and have been changed. 
