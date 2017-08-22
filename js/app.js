@@ -3,7 +3,7 @@ angular.module('BandSite', ['ngRoute', 'angular-storage', 'RouteControllers', 'N
 angular.module('BandSite').config(function($routeProvider) {
 
 	$routeProvider.when('/', {
-		templateUrl: 'templates/home.html'
+		templateUrl: 'templates/home.html',
 	})
 
 	.when('/music', {

@@ -78,13 +78,16 @@ angular.module('RouteControllers', [])
 	})
 
 	.controller('MusicSearch', function($scope, $http) {
+		angular.element(document).ready(function(){
+			$('#songsearch').keyup(function(){
+				$('#songs').slideDown();
+			})
+		})
 
 		$http.get("js/musiclist.json").then(function(response) {
         $scope.myData = response.data.music;
-   		 });
-
-
-	})
+   		 	});
+		})
 
 
 	.controller('BookingsForm', function($scope, $http) {
@@ -150,4 +153,5 @@ angular.module('RouteControllers', [])
 		}
 
 	})
+
 
