@@ -4,22 +4,22 @@
 	<form name="registrationForm" data-ng-submit="submitForm()" novalidate="">
   <div class="form-group">
     <label for="name">First Name:</label>
-    <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" ng-model="fname" required>
+    <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" ng-model="fields.fname" required>
     <p data-ng-show="registrationForm.fname.$pristine" class="help-block">Your first name is required</p>
   </div>
    <div class="form-group">
     <label for="name">Last Name:</label>
-    <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" ng-model="lname" required>
+    <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" ng-model="fields.lname" required>
     <p data-ng-show="registrationForm.lname.$pristine" class="help-block">Your last name is required</p>
   </div>
   <div class="form-group">
     <label for="email">Email Address</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="email" required>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="fields.email" required>
     <p data-ng-show="registrationForm.email.$pristine" class="help-block">Your email address is required</p>
   </div>
   <div class="form-group">
     <label for="name">Date</label>
-    <input type="text" class="form-control" id="datepicker" placeholder="Date" name="date" ng-model="date" required>
+    <input type="text" class="form-control" id="datepicker" placeholder="Date" name="date" ng-model="fields.date" required>
     <p data-ng-show="registrationForm.date.$pristine" class="help-block">Please choose a date</p>
   </div>
   <button type="submit" class="btn btn-default" ng-disabled="registrationForm.$invalid" data-toggle="modal" data-target="#BookingConfirm">Submit</button>
@@ -34,10 +34,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Thanks for your booking <span>{{fname}}</span></h4>
+        <h4 class="modal-title">Thanks for your booking <span>{{fields.fname}}</span></h4>
       </div>
       <div class="modal-body">
-        <p>You'll recieve an email shortly with confirmation of your booking xx</p>
+        <p>You'll recieve an email shortly with confirmation of your booking</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

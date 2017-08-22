@@ -1,4 +1,4 @@
-angular.module('BandSite', ['ngRoute', 'angular-storage', 'RouteControllers', 'NavDirective', 'NewsCont', 'MailList', 'Footer', 'ngMap']);
+angular.module('BandSite', ['ngRoute', 'angular-storage', 'RouteControllers', 'NavDirective', 'NewsCont', 'MailList', 'Footer']);
 
 angular.module('BandSite').config(function($routeProvider) {
 
@@ -18,6 +18,10 @@ angular.module('BandSite').config(function($routeProvider) {
 
 	.when('/social', {
 		templateUrl: 'templates/social.html'
+	})
+
+	.when('/video', {
+		templateUrl: 'templates/videos.html'
 	})
 
 	.when('/aboutus', {
