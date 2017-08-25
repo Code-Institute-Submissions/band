@@ -59,7 +59,7 @@ Testing was carried out by changing the code and loading the browser when requir
 
 Once the site was at it's final stages it has been tested by colleagues if anything was broken in anyways, if any issues were found they were reported and have been changed. 
 
-## Issues Found
+#### Issues Found
 
 - Form email validation was not telling the user why the email was incorrect. 
 - Added the code to Mailing List form```<p ng-show="mailList.email.$touched && mailList.email.$invalid" class="alert alert-danger">Please enter a valid email address.</p>``` and the bookings form ```<p ng-show="registrationForm.email.$touched && registrationForm.email.$invalid" class="alert alert-danger">Please enter a valid email address.</p>``` to alert the user with a red danger box if there is a problem with the email rather than the submit button disabled
