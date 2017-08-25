@@ -15,7 +15,9 @@
   <div class="form-group">
     <label for="email">Email Address</label>
     <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="fields.email" required>
-    <p data-ng-show="registrationForm.email.$pristine" class="help-block">Your email address is required</p>
+    <p data-ng-show="registrationForm.lname.$pristine" class="help-block">Your email is required</p>
+    <!--display alert if incorrect email is entered-->
+    <p ng-show="registrationForm.email.$touched && registrationForm.email.$invalid" class="alert alert-danger">Please enter a valid email address</p>
   </div>
   <div class="form-group">
     <label for="name">Date</label>

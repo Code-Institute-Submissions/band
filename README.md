@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # The Hooties
 
 ## Overview
@@ -115,4 +114,3 @@ The site uses Angular JS and designed with bootstrap.
 5. Once **http-server** is installed run ```http-server```
 6. The project will now run on [localhost](http://127.0.0.1:8080)
 7. Make changes to the code and if you think it belongs in here then just submit a pull request
->>>>>>> b091d02bb163f0ec2b06752e767cab5d0d05b7d3

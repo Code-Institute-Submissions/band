@@ -10,6 +10,17 @@
 	}
 
 
+/* for form validation shows green or red depending on status of form*/
+	.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+	}
+
+
+	.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+	}
+
+
 	#songsearch {
 
 	border-radius: 5px;
@@ -525,9 +536,6 @@
 		border: none;
 	}
 
-	#songs {
-		display: none
-	}
 
 	label {
 		font-size: 15px;
