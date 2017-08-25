@@ -64,7 +64,7 @@ Once the site was at it's final stages it has been tested by colleagues if anyth
 - Form email validation was not telling the user why the email was incorrect. 
 - Added the code to Mailing List form```<p ng-show="mailList.email.$touched && mailList.email.$invalid" class="alert alert-danger">Please enter a valid email address.</p>``` and the bookings form ```<p ng-show="registrationForm.email.$touched && registrationForm.email.$invalid" class="alert alert-danger">Please enter a valid email address.</p>``` to alert the user with a red danger box if there is a problem with the email rather than the submit button disabled
 
-- Test users found they could book the calander with dates into into the past
+- Test users found they could book the calander with dates into the past
 - minDate:0 was added to prevent dates in the past being selected.
           ```$( "#datepicker" ).datepicker({
           dateFormat: 'dd MM yy',
