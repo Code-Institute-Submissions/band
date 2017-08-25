@@ -1,157 +1,165 @@
 <div id="headpicture">
-		<div class="jumbotron">
-		<div class="textdisplay"><p>We are a swing/jive band that has played many weddings and corporate events, we can accomodate many types of functions and are always happy to here from you, you can head over to our <a href="#/music">music</a> page to hear our latest songs and see our some of our videos. If you'd like to book us you can fill in the form <a href="#/bookings">here</a>!!
-		</p>
-		</div>
-		</div>
+   <div class="jumbotron">
+      <div class="textdisplay">
+         <p>We are a swing/jive band that has played many weddings and corporate events, we can accomodate many types of functions and are always happy to here from you, you can head over to our <a href="#/music">music</a> page to hear our latest songs and see our some of our videos. If you'd like to book us you can fill in the form <a href="#/bookings">here</a>!!
+         </p>
+      </div>
+   </div>
 </div>
 <br>
 <div class="container">
-<h2>We are touring!!</h2>
-		<div class="col-lg-12">
-		<table class="table">
-    <th>Location</th>
-    <th></th>
-    <th>Date</th>
-    <tr ng-repeat="x in myTour">
-    <td>{{x.Location}}</td>
-    <td><a href={{x.Link}} target="_blank"> <span class="glyphicon glyphicon-map-marker"></span></a></td>
-    <td>{{x.Date}}</td>
-    </tr>
-  </table>
-		</div>
-	<h2>News</h2>
-	<div class="row newscolor">
-		<div class="col-sm-4">
-		<p>
-		<img class="newsimages" src="images/albumcover1.jpg">
-		</p>
-		</div>
-		<div class="col-sm-4 infobox">
-		<h2>New Video</h2>
-		<p>Check out our new music video, we hope you like it, it took us a few years but we have something we really like and hope you will enjoy. You can find it <a href="#/video">here</a></p>
-		</div>
-	</div>
-	<div class="row newscolor">
-		<div class="col-sm-4">
-		<p>
-		<img class="newsimages" src="images/albumcover3.jpg">
-		</p>
-		</div>
-		<div class="col-sm-4 infobox">
-		<h2>New Music</h2>
-		<p>We have a new song!! you can check it out <a href="#/music">here</a></p>
-		</div>
-	</div>
+   <h2>We are touring!!</h2>
+   <div class="col-lg-12">
+      <table class="table">
+         <th>Location</th>
+         <th></th>
+         <th>Date</th>
+         <tr ng-repeat="x in myTour">
+            <td>{{x.Location}}</td>
+            <td><a href={{x.Link}} target="_blank"> <span class="glyphicon glyphicon-map-marker"></span></a></td>
+            <td>{{x.Date}}</td>
+         </tr>
+      </table>
+   </div>
+   <h2>News</h2>
+   <div class="row newscolor">
+      <div class="col-sm-4">
+         <p>
+            <img class="newsimages" src="images/albumcover1.jpg">
+         </p>
+      </div>
+      <div class="col-sm-4 infobox">
+         <h2>New Video</h2>
+         <p>Check out our new music video, we hope you like it, it took us a few years but we have something we really like and hope you will enjoy. You can find it <a href="#/video">here</a></p>
+      </div>
+   </div>
+   <div class="row newscolor">
+      <div class="col-sm-4">
+         <p>
+            <img class="newsimages" src="images/albumcover3.jpg">
+         </p>
+      </div>
+      <div class="col-sm-4 infobox">
+         <h2>New Music</h2>
+         <p>We have a new song!! you can check it out <a href="#/music">here</a></p>
+      </div>
+   </div>
 </div>
-
-	
-
 <!-- modals -->
 <div class="modal fade" tabindex="-1" role="dialog" id="newsletter">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title goodday"></h4>
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title goodday"></h4>
+         </div>
+         <div class="modal-body">
+            <p>Want to hear when we'll be playing live events and release new music? Sign up below.</p>
+         </div>
+         <form name="maillistPopUp" ng-submit="SubmitMailListPopUp">
+            <div class="form-group formpadding">
+               <label for="name">Name</label>
+               <input type="text" class="form-control" id="name" name="name" placeholder="Name" ng-model="name" required="">
+               <p data-ng-show="maillistPopUp.name.$pristine" class="help-block">Your name is required</p>
+            </div>
+            <div class="form-group formpadding">
+               <label for="email">Email Address</label>
+               <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="email" required="">
+               <p data-ng-show="maillistPopUp.email.$pristine" class="help-block">Your email is required</p>
+            </div>
+         </form>
+         <div class="modal-footer">
+            <button type="submit" class="btn btn-default" id="submit" ng-disabled="maillistPopUp.$invalid" data-toggle="modal" data-target="#myModal">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
       </div>
-      <div class="modal-body">
-        <p>Want to hear when we'll be playing live events and release new music? Sign up below.</p>
-      </div>
-      <form name="maillistPopUp" ng-submit="SubmitMailListPopUp">
-  <div class="form-group formpadding">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" name="name" placeholder="Name" ng-model="name" required="">
-    <p data-ng-show="maillistPopUp.name.$pristine" class="help-block">Your name is required</p>
-  </div>
-  <div class="form-group formpadding">
-    <label for="email">Email Address</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="email" required="">
-    <p data-ng-show="maillistPopUp.email.$pristine" class="help-block">Your email is required</p>
-  </div>
-</form>
-      <div class="modal-footer">
-      	<button type="submit" class="btn btn-default" id="submit" ng-disabled="maillistPopUp.$invalid" data-toggle="modal" data-target="#myModal">Submit</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Thanks for registering {{name}}</h4>
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Thanks for registering {{name}}</h4>
+         </div>
+         <div class="modal-body">
+            <p>We'll send you an email when we have exciting news and events planned</p>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
       </div>
-      <div class="modal-body">
-        <p>We'll send you an email when we have exciting news and events planned</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 <div class="modal fade" tabindex="-1" role="dialog" id="map1">
-  <div class="modal-dialog" role="document">
-  	<div class="modal-content modal-map">
-  		<div class="modal-body" id="maparea1"></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+   <div class="modal-dialog" role="document">
+      <div class="modal-content modal-map">
+         <div class="modal-body" id="maparea1"></div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 <div class="modal fade" tabindex="-1" role="dialog" id="map2">
-  <div class="modal-dialog" role="document">
-  	<div class="modal-content modal-map">
-  		<div class="modal-body" id="maparea2"></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+   <div class="modal-dialog" role="document">
+      <div class="modal-content modal-map">
+         <div class="modal-body" id="maparea2"></div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 <div class="modal fade" tabindex="-1" role="dialog" id="map3">
-  <div class="modal-dialog" role="document">
-  	<div class="modal-content modal-map">
-  		<div class="modal-body" id="maparea3"></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+   <div class="modal-dialog" role="document">
+      <div class="modal-content modal-map">
+         <div class="modal-body" id="maparea3"></div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 <div class="modal fade" tabindex="-1" role="dialog" id="map4">
-  <div class="modal-dialog" role="document">
-  	<div class="modal-content modal-map">
-  		<div class="modal-body" id="maparea4"></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+   <div class="modal-dialog" role="document">
+      <div class="modal-content modal-map">
+         <div class="modal-body" id="maparea4"></div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 <div class="modal fade" tabindex="-1" role="dialog" id="map5">
-  <div class="modal-dialog" role="document">
-  	<div class="modal-content modal-map">
-  		<div class="modal-body" id="maparea5"></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+   <div class="modal-dialog" role="document">
+      <div class="modal-content modal-map">
+         <div class="modal-body" id="maparea5"></div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 <script type="js/js.cookie.js"></script>
- 
-
-
