@@ -30,6 +30,8 @@ angular.module('RouteControllers', [])
                 Cookies.set('newsletteronce', 'yes', {
                     expires: 7
                 });
+
+                //modal appears in 3 seconds
                 setTimeout(function() {
                     $('#newsletter').modal()
                 }, 3000); // 3 seconds.	
