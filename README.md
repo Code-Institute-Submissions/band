@@ -33,7 +33,11 @@ Existing Features
     - We use **npm** to help manage some of the dependencies in our application
 - [bower](https://bower.io/)
     - **Bower** is used to manage the installation of our libraries and frameworks
- 
+- [jquery cookie](https://github.com/carhartl/jquery-cookie)
+    - The site uses jqeury cookie to prevent the model from appearing every time they load the page, currently set to show after every 7 days. 
+- [jqeury](http://jquery.com/)    
+    - jquery is used throughout the site from date pickers to showing models.
+    
 ## Contributing
 
  
@@ -62,7 +66,7 @@ Once the site was at it's final stages it has been tested by colleagues if anyth
 #### Issues Found
 
 - Form email validation was not telling the user why the email was incorrect. 
-- Added the code to Mailing List form```<p ng-show="mailList.email.$touched && mailList.email.$invalid" class="alert alert-danger">Please enter a valid email address.</p>``` and the bookings form ```<p ng-show="registrationForm.email.$touched && registrationForm.email.$invalid" class="alert alert-danger">Please enter a valid email address.</p>``` to alert the user with a red danger box if there is a problem with the email rather than the submit button disabled
+- Added the code to Mailing List form```<p ng-show="mailList.email.$touched && mailList.email.$invalid" class="alert alert-danger">Please enter a valid email address.</p>``` and the bookings form ```<p ng-show="registrationForm.email.$touched && registrationForm.email.$invalid" class="alert alert-danger">Please enter a valid email address.</p>``` to alert the user with a red danger box if there is a problem with the email rather than the submit button disabled and the user not knowing why.
 
 - Test users found they could book the calander with dates into the past
 - minDate:0 was added to prevent dates in the past being selected.
